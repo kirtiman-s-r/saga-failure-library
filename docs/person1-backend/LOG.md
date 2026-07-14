@@ -19,3 +19,9 @@ Rule: only ADD entries at the bottom.
 **Notes:** Port 5432 conflict — handle this in Day 4 docker-compose setup.
 
 ---
+## M1.W1.D3 — July 14
+**Did:** Generated Spring Boot project via start.spring.io (Spring Web, Spring Data JPA, PostgreSQL Driver), imported into IntelliJ, ran via `mvn spring-boot:run`.
+**Result:** App started successfully, then failed as expected with "Failed to configure a DataSource" — no DB connection configured yet, no Postgres running. This is the expected Day 3 checkpoint error.
+**Notes:** Maven wrapper (.mvn folder) got lost during manual folder move — not an issue, used system-installed Maven (mvn command) instead of wrapper (./mvnw).
+
+---

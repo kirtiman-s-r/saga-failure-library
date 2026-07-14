@@ -19,3 +19,13 @@ Only add entries to YOUR OWN file. Never edit or delete someone else's entries.
 **Notes:** (optional) anything weird you hit, skip if nothing
 
 ---
+
+Quick reference for prefixes going forward (save this, you'll use it constantly):
+
+feat: → new feature/functionality (e.g. "feat: add POST /api/events endpoint")
+fix: → bug fix (e.g. "fix: resolve CORS error on events endpoint")
+docs: → documentation only, no code logic (today's case)
+chore: → setup/config/tooling stuff, no feature or fix (e.g. "chore: add docker-compose healthcheck")
+test: → adding/fixing tests
+
+Format: type: short description in lowercase, present tense, no period at the end
