@@ -25,9 +25,15 @@ Rule: only ADD entries at the bottom.
 **Notes:** Maven wrapper (.mvn folder) got lost during manual folder move — not an issue, used system-installed Maven (mvn command) instead of wrapper (./mvnw).
 
 ---
-## M1.W1.D4 — July [today]
+## M1.W1.D4 — July 15
 **Did:** Wrote docker-compose.yml with a Postgres service (db: saga_db, port mapped 5433:5432 due to local Postgres conflict on 5432). Ran with `docker compose up -d`.
 **Result:** Container `saga-postgres` running successfully, confirmed via docker ps.
 **Notes:** Used `docker compose` (space) not `docker-compose` (hyphen) — the hyphenated command isn't installed on this system, but the newer space version is built into Docker already. Also had to remap port to 5433 due to existing local Postgres on 5432 (same as Day 2).
+
+---
+## M1.W1.D5 — July 15
+**Did:** Added datasource config to application.properties (URL, username, password matching docker-compose Postgres on port 5433). Restarted Spring Boot app. Verified connection in DBeaver too.
+**Result:** Spring Boot starts with zero errors — Hikari connection pool connects successfully to saga_db. DBeaver "Test Connection" also confirms Connected.
+**Notes:** Used port 5433 throughout (not 5432) due to existing local Postgres conflict from Day 2/4. No volume set up yet for Postgres data — data will be lost if container is removed; need to add a volume before real data matters (Week 2+).
 
 ---
