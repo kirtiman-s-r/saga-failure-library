@@ -25,3 +25,9 @@ Rule: only ADD entries at the bottom.
 **Notes:** Maven wrapper (.mvn folder) got lost during manual folder move — not an issue, used system-installed Maven (mvn command) instead of wrapper (./mvnw).
 
 ---
+## M1.W1.D4 — July [today]
+**Did:** Wrote docker-compose.yml with a Postgres service (db: saga_db, port mapped 5433:5432 due to local Postgres conflict on 5432). Ran with `docker compose up -d`.
+**Result:** Container `saga-postgres` running successfully, confirmed via docker ps.
+**Notes:** Used `docker compose` (space) not `docker-compose` (hyphen) — the hyphenated command isn't installed on this system, but the newer space version is built into Docker already. Also had to remap port to 5433 due to existing local Postgres on 5432 (same as Day 2).
+
+---

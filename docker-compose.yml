@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: saga-postgres
+    environment:
+      POSTGRES_DB: saga_db
+      POSTGRES_USER: saga_user
+      POSTGRES_PASSWORD: saga_pass
+    ports:
+      - "5433:5432"
