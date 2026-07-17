@@ -37,3 +37,9 @@ Rule: only ADD entries at the bottom.
 **Notes:** Used port 5433 throughout (not 5432) due to existing local Postgres conflict from Day 2/4. No volume set up yet for Postgres data — data will be lost if container is removed; need to add a volume before real data matters (Week 2+).
 
 ---
+## M1.W2.D1 — July 16
+**Did:** Created SagaEvent entity class (transactionId, serviceId, status, timestamp fields) with @Entity/@Table annotations. Restarted Spring Boot app.
+**Result:** saga_events table auto-created in Postgres via Hibernate ddl-auto=update, confirmed in DBeaver with correct columns (id, service_id, status, timestamp, transaction_id).
+**Notes:** Postgres container had stopped (likely laptop restart/sleep) — had to run docker compose up -d again before Spring Boot could connect. Also learned mvn clean install runs tests (which need a live DB), while mvn spring-boot:run does not — that's why clean install failed when the container was down.
+
+---
